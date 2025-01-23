@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    ></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    ></meta>
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="./css/main.css"
+    ></link>
+
+    <title>
+        Ride with Uber | Request Rides
+    </title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav_container container">
+            <div class="header__container">
+                <div class="left__header__logo__items">
+                    <img
+                        src="./assets/icons/Uber-Logo.wine.svg"
+                        alt="Uber Logo"
+                        style="width: 65px; height: 65px;"
+                    >
+
+                    <ul class="header__nav">
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Ride</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Drive</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Business</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Uber Eats</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right__header__logo__items">
+                    <ul class="header__nav">
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >
+                                <img
+                                    class="globe__icon"
+                                    src="./assets/icons/globe.svg"
+                                    alt=""
+                                    style="height: 13px; width: 13px;"
+                                >
+
+                                EN
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Help</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a
+                                href="#"
+                                class="nav__link"
+                            >Log in</a>
+                        </li>
+
+                        <li class="nav__item nav__item__signup">
+                            <a
+                                href="#"
+                                class="nav__link nav__link__signup"
+                            >Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bottom__section__container nav_container">
+            <div class="bottom__header__container">
+                <p class="header__title">Ride</p>
+
+                <ul class="header__nav">
+                    <li class="nav__item">
+                        <a
+                            href="#"
+                            class="bottom__nav__link"
+                        >Request a ride</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            href="#"
+                            class="bottom__nav__link"
+                        >Reserve a ride</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            href="#"
+                            class="bottom__nav__link"
+                        >See prices</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            href="#"
+                            class="bottom__nav__link"
+                        >Explore ride options</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            href="#"
+                            class="bottom__nav__link"
+                        >Airport rides</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="hero__section__container container">
+            <div class="hero__heading__container">
+                <h1>
+                    Request a ride for now or later
+                </h1>
+
+                <p>
+                    Add your trip details, hop in, and go.
+                </p>
+
+                <div class="hero__trip__details__container">
+                    <div class="hero__trip__box">
+                        <form
+                            class="hidden-form"
+                            action="#"
+                            method="post"
+                        >
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Enter location"
+                                required="required"
+                                onblur="deactivateInput(this)"
+                            ></input>
+                        </form>
+
+                        <img
+                            src="./assets/icons/geo-alt.svg"
+                            alt="Location Icon"
+                            style="height: 20px; width: 20px;"
+                            class="location__icon"
+                            onclick="toggleLocationIcon(this)"
+                        >
+                    </div>
+
+                    <div class="hero__trip__box">
+                        <form
+                            class="hidden-form"
+                            action="#"
+                            method="post"
+                        >
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Enter destination"
+                                required="required"
+                                onblur="deactivateInput(this)"
+                            ></input>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hero__prices__container">
+                    <div class="hero__prices__text1">
+                        <p>
+                            <a href="#">prices</a>
+                        </p>
+                    </div>
+
+                    <div class="hero__prices__text2">
+                        <p>Schedule for later</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image__container">
+                <img
+                    src="./assets/images/travel-ilustra.webp"
+                    alt="Hero Image"
+                    class="hero__image"
+                >
+            </div>
+        </section>
+
+        <section class="suggestion__section__container container margin__top__10">
+            <p class="suggestion__txt__header">Suggestions</p>
+
+            <div class="suggestion__container grid grid__6__cols container">
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">Ride</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/ride.png"
+                            alt="Ride"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">Rental Cars</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/car-rentals.png"
+                            alt="Car Rentals"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">Reserve</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/reserve_clock.png"
+                            alt="Ride"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">Grocery</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/grocery.png"
+                            alt="Grocery Icon"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">2-Wheels</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/lime.png"
+                            alt="lime Icon"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+
+                <div class="suggestion__box">
+                    <p class="suggestion__headers">Courier</p>
+
+                    <div class="suggestion__box__items">
+                        <span>
+                            Go anywhere with Uber. Request a ride, hop in, and go.
+                        </span>
+
+                        <img
+                            src="./assets/images/Courier.png"
+                            alt="Courier Icon"
+                            class="suggestion__image"
+                        >
+                    </div>
+
+                    <div class="suggestion__box__details">
+                        <p>Detials</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero__bottom__cards">
+            <div class="hero__bottom__cards__container container">
+                <div class="hero__bottom__card">
+                    <div class="hero__bottom__card__image">
+                        <img
+                            src="./assets/images/Planning_RingS-M.webp"
+                            alt="iTunes Icon"
+                            class="hero__bottom__card__image"
+                        >
+                    </div>
+
+                    <div class="hero__bottom__card__header">
+                        <h4>
+                            Reserve a ride that’s ready when you are
+                        </h4>
+                    </div>
+
+                    <div class="hero__bottom__card__txt">
+                        <p>
+                            Now more than ever, reservations are a way of life. Reserve a premium Uber experience, up to 90 days in advance, for whenever you’re ready to ride.
+                        </p>
+
+                        <span>Learn more about Uber Reserve</span>
+                    </div>
+                </div>
+
+                <div class="hero__bottom__card">
+                    <div class="hero__bottom__card__image">
+                        <img
+                            src="./assets/images/Parents_InvitetoAddaTeen_3240x3240-(1) (1).webp"
+                            alt="iTunes Icon"
+                            class="hero__bottom__card__image"
+                        >
+                    </div>
+
+                    <div class="hero__bottom__card__header">
+                        <h4>Use teen accounts on Uber*</h4>
+                    </div>
+
+                    <div class="hero__bottom__card__txt">
+                        <p>
+                            Peace of mind for you, independence for them. With a teen account, they’ll have the freedom to request their own rides and you’ll be notified every time they do. Plus, with live safety features and real-time updates, you can follow along from pickup to dropoff. Currently available only in select locations.
+                        </p>
+
+                        <span>Learn how teen accounts work</span>
+                    </div>
+                </div>
+
+                <div class="hero__bottom__card">
+                    <div class="hero__bottom__card__image">
+                        <img
+                            src="./assets/images/Uber_XL_Small-(3).webp"
+                            alt="Google Play Icon"
+                            class="hero__bottom__card__image"
+                        >
+                    </div>
+
+                    <div class="hero__bottom__card__header">
+                        <h4>
+                            Car rentals nearby for any occasion
+                        </h4>
+                    </div>
+
+                    <div class="hero__bottom__card__txt">
+                        <p>
+                            Whether you need a car today or in the future, Uber’s online booking experience will help you find the right vehicle for a family vacation, a weekend getaway, a road trip, airport travel, and more. With Uber Rent, your car rental needs are prioritized.
+                        </p>
+
+                        <span>Learn more about Uber Rent</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="get__what__you__need">
+            <div class="get__what__you__need__container container">
+                <div class="get__what__you__need__txt">
+                    <div class="get__what__you__need__header">
+                        <h2>
+                            Go where you want. Get what you need. All with Uber One.
+                        </h2>
+
+                        <p>
+                            One membership for member pricing and experiences on rides, deliveries, and more.
+                        </p>
+
+                        <span>Sign up for just $9.99/month.</span>
+                    </div>
+
+                    <div class="get__what__you__need__btn">
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="get__what__you__need_img">
+                    <img
+                        src="./assets/images/UBER-ONE_One_Membership_for_Uber_and_Uber_Eats_Interstitial-Full-750-x-6803x.webp"
+                        alt="Get What You Need"
+                        class="get__what__you__need__image"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="ride__with__friends">
+            <div class="ride__with__friends__container container">
+                <div class="ride__with_img">
+                    <img
+                        src="./assets/images/landing-stops-group-rides.webp"
+                        alt="Ride With Friends"
+                        class="ride__with__friends__image"
+                    >
+                </div>
+
+                <div class="ride__with__friends__txt">
+                    <div class="ride__with__friends__header">
+                        <h2>Ride with friends seamlessly</h2>
+
+                        <p>
+                            Riding with friends just got easier: set up a group ride in the Uber app, invite your friends, and arrive at your destination. Friends who ride together save together.
+                        </p>
+
+                        <div class="learn__more">
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="uber__app__section margin__top__10 container">
+            <p class="uber__app__header">
+                Use the Uber app to help you travel your way
+            </p>
+
+            <div class="container grid__3__cols grid">
+                <div class="uber__app__box">
+                    <img
+                        src="./assets/images/U_CoastalCalifornia_White_Final-(1).webp"
+                        alt="Uber App"
+                        class="uber__app_img"
+                    >
+
+                    <div class="uber__app__txt__container">
+                        <div class="uber__app__txt">
+                            <h4>Ride Options</h4>
+
+                            <p>
+                                There’s more than one way to move with Uber, no matter where you are or where you’re
+
+                                <br>
+                                headed next.
+                            </p>
+                        </div>
+
+                        <div class="uber__app__btn">
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uber__app__box">
+                    <img
+                        src="./assets/images/Airport-rides.webp"
+                        alt="Uber App"
+                        class="uber__app_img"
+                    >
+
+                    <div class="uber__app__txt__container">
+                        <div class="uber__app__txt">
+                            <h4>700+ airports</h4>
+
+                            <p>
+                                You can request a ride to and from most major airports. Schedule a ride to the airport for one less thing to worry about.
+                            </p>
+                        </div>
+
+                        <div class="uber__app__btn">
+                            <a href="#">Search airports</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uber__app__box">
+                    <img
+                        src="./assets/images/SS_Commuter.webp"
+                        alt="Uber App"
+                        class="uber__app_img"
+                    >
+
+                    <div class="uber__app__txt__container">
+                        <div class="uber__app__txt">
+                            <h4>10,000+ cities</h4>
+
+                            <p>
+                                The app is available in thousands of cities worldwide, so you can request a ride even when
+
+                                <br>
+                                you’re far from home.
+                            </p>
+                        </div>
+
+                        <div class="uber__app__btn">
+                            <a href="#">Search cities</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="looking__for__business">
+            <div class="looking__for__business__container container margin__top__10">
+                <div class="looking__for__business__txt">
+                    <h4>
+                        Looking for business solutions?
+                    </h4>
+
+                    <p>
+                        Get information about how companies leverage Uber for Business:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="#">Business travel</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Courtesy rides</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Meal programs</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Item delivery</a>
+                        </li>
+                    </ul>
+
+                    <div class="get__started__btn__container">
+                        <div class="get__started__btn">
+                            <a
+                                class="get__started__btn__txt"
+                                href="#"
+                            >Get started</a>
+                        </div>
+
+                        <div class="get__started__txt">
+                            <a href="#">Check out our solutions</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="looking__for__business__image">
+                    <img
+                        src="./assets/images/U4B_Spot_U4BWebsite.webp"
+                        alt="Ride With Friends"
+                        class="ride__with__friends__image"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="FAQ__Questions__section">
+            <div class="FAQ__Questions__container container">
+                <h4>Frequently asked questions</h4>
+
+                <div class="FAQ__Question">
+                    <div
+                        class="FAQ__Question__header"
+                        onclick="toggleFAQ(this)"
+                    >
+                        <p>
+                            Can I have a lost item delivered to me?
+                        </p>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="FAQ__Question__content">
+                        <p>
+                            The Uber app helps provide a delivery solution that can save you a trip
+                            across town, whether it’s for a last-minute birthday gift or your
+                            forgotten keys. Just choose Package in the Uber app.
+                        </p>
+
+                        <a href="#">Get details</a>
+                    </div>
+                </div>
+
+                <div class="FAQ__Question">
+                    <div
+                        class="FAQ__Question__header"
+                        onclick="toggleFAQ(this)"
+                    >
+                        <p>Can I rent a car using Uber?</p>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="FAQ__Question__content">
+                        <p>
+                            Yes, Uber offers car rental services through its Uber Rent feature.
+                        </p>
+
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="FAQ__Question">
+                    <div
+                        class="FAQ__Question__header"
+                        onclick="toggleFAQ(this)"
+                    >
+                        <p>
+                            Can I request a ride that picks up friends in different locations?
+                        </p>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="FAQ__Question__content">
+                        <p>
+                            Multi-stop trips are available to make it convenient for picking up
+                            friends from different locations.
+                        </p>
+
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="FAQ__Question">
+                    <div
+                        class="FAQ__Question__header"
+                        onclick="toggleFAQ(this)"
+                    >
+                        <p>Can I request a taxi on Uber?</p>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="FAQ__Question__content">
+                        <p>
+                            Yes, Uber Taxi is an option available in certain locations.
+                        </p>
+
+                        <a href="#">Get details</a>
+                    </div>
+                </div>
+
+                <div class="FAQ__Question">
+                    <div
+                        class="FAQ__Question__header"
+                        onclick="toggleFAQ(this)"
+                    >
+                        <p>
+                            Is there an Uber ride option for 5 people?
+                        </p>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="FAQ__Question__content">
+                        <p>
+                            UberXL offers rides that can accommodate up to 6 passengers.
+                        </p>
+
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Do__more__in__the__app">
+            <div class="Do__more__in__the__app__txt container">
+
+                <h4>Do more in the app</h4>
+
+                <div class="Do__more__in__the__app__container">
+
+                    <div class="Do__more__in__the__app__txt">
+                        <img
+                            src="./assets/images/Final-Download-Uber-App.webp"
+                            alt="Download Barcode For Uber App"
+                            class="Barcode__image"
+                        >
+                    </div>
+
+                    <div class="Do__more__in__the__app__image">
+                        <img
+                            src="./assets/images/Rider-App-Icon_iOS.svg"
+                            alt="Ride With Friends"
+                            class="Barcode__image"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

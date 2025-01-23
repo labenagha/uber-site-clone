@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+
+/* ############################################
+# General Resuable elements
+############################################ */
+:root {
+    --color-primary: #000;
+    --color-secondary: #1a1a1a;
+    --color-tertiary: #333333b8;
+    --color-light: #f5f5f5;
+    --color-dark: #b8b8b8;
+    --color-grey-light: ;
+    --color-grey-dark: ;
+    --font-size-small: 1.4rem;
+    --font-size-x-small: 1.2rem;
+    --font-size-normal: 2.2rem;
+    --font-size-small-normal: 1.7rem;
+    --font-size-large: 5.5rem;
+    --font-size-meduim-large: 3.5rem;
+}
+
+/* padding: top right bottom left; */
+
+/* Consitent container for repeating session in the page */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.margin__top__10 {
+    margin-top: 10rem;
+}
+
+.grid {
+    display: grid;
+}
+.grid__3__cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+}
+
+.grid__6__cols {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+/*############################################
+#            Header section
+############################################*/
+.header {
+    background-color: var(--color-primary);
+    height: 6.5rem;
+}
+
+.nav_container {
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+    /* padding: top right bottom left; */
+    padding: 0.5rem 0 2.8rem 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left__header__logo__items {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.right__header__logo__items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem 0 2.8rem 0;
+}
+
+.bottom__header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    /* padding: top right bottom left; */
+    padding: 1.1rem 0.8rem 1.1rem 0.8rem;
+}
+
+.globe__icon {
+    text-align: center;
+}
+
+.header__nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--font-size-small);
+}
+
+.header__title {
+    color: #000;
+    font-weight: 700;
+    font-size: var(--font-size-normal);
+}
+
+.nav__item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item__signup {
+    display: inline-block;
+    background-color: #fff;
+    /* padding: top right bottom left; */
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+}
+
+.nav__link__signup {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.bottom__nav__link {
+    text-decoration: none;
+    color: var(--color-tertiary);
+    font-size: var(--font-size-small);
+    font-weight: 100;
+}
+
+/*############################################
+#            Hero section
+############################################*/
+.hero__section__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10.5rem;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+.hero__heading__container h1 {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: -3.2px;
+    width: fit-content;
+    max-width: 50rem;
+}
+
+.hero__heading__container p {
+    font-size: var(--font-size-small-normal);
+    color: var(--color-secondary);
+    font-weight: 200;
+    margin-top: 3.5rem;
+}
+
+.hero__trip__details__container {
+    display: flex;
+    margin-top: 2.2rem 0;
+    flex-direction: column;
+}
+
+.hero__trip__box {
+    background-color: #eeeeee;
+    max-width: 40rem;
+    /* padding: top right bottom left; */
+    padding: 1.8rem 1.2rem 1.8rem 1.2rem;
+    margin-top: 1.2rem;
+    border-radius: 5px;
+    max-width: 40rem;
+    cursor: text;
+    position: relative;
+}
+
+.location__icon {
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    cursor: pointer;
+    transform: translateY(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+.location__icon.flipped {
+    transform: translateY(-20%) rotate(180deg);
+}
+
+.hero__trip__box input[type="text"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.hero__trip__box input[type="text"]:focus {
+    border-color: var(--color-primary);
+}
+
+.hero__trip__box.active {
+    border-color: var(--color-primary);
+}
+
+.placeholder {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+}
+
+
+.hero__prices__container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero__prices__text1 p {
+    font-size: var(--font-size-small);
+    color: #fff;
+    margin: 0 auto;
+}
+
+.hero__prices__text1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero__prices__text2 p {
+    font-size: var(--font-size-small);
+    color: var(--color-primary);
+    margin: 0 auto;
+}
+
+.hero__prices__text1 {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--color-primary);
+    /* padding: top right bottom left; */
+    padding: 1.6rem 2.2rem 1.6rem 2.2rem;
+    border-radius: 10px;
+}
+
+.hero__prices__text2 {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #eeeeee;
+    /* padding: top right bottom left; */
+    padding: 1.6rem 2.2rem 1.6rem 2.2rem;
+    border-radius: 10px;
+}
+
+.hero__prices__text1:hover,
+.hero__prices__text1:active {
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero__prices__text2:hover,
+.hero__prices__text2:active {
+    background-color: #e6e6e6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/*############################################
+#            Suggestion section
+############################################*/
+.suggestion__box {
+    background-color: var(--color-light);
+    border-radius: 10px;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+}
+
+.suggestion__section__container .suggestion__txt__header {
+    font-size: var(--font-size-meduim-large);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.suggestion__image {
+    width: 30%;
+}
+
+.suggestion__box__items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: -1.8rem 0;
+}
+
+.suggestion__box__details {
+    display: inline-block;
+    /* padding: top right bottom left; */
+    padding: 1.2rem 2rem 1.2rem 2rem;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+}
+
+.suggestion__box__details:hover,
+.suggestion__box__details:active {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.suggestion__headers {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.suggestion__box__items span {
+    font-size: var(--font-size-x-small);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+
+/*############################################*/
+/*            Hero Bottom section             */
+/*############################################*/
+.hero__bottom__cards__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 3.4rem;
+}
+
+.hero__bottom__card {
+    max-width: 40rem;
+    flex: 1 1 40%;
+    overflow: hidden;
+}
+
+.hero__bottom__card__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero__bottom__card__header h4 {
+    font-size: var(--font-size-small-normal);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.hero__bottom__card__txt p {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+    font-weight: 200;
+    margin: 1.5rem 0;
+    line-height: 1.8;
+}
+
+.hero__bottom__card__txt span {
+    font-size: var(--font-size-small);
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/*############################################*/
+/*            What You Need section           */
+/*############################################*/
+
+.get__what__you__need {
+    background-color: var(--color-primary);
+}
+
+.get__what__you__need__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10.5rem;
+    padding: 6rem 0;
+}
+
+.get__what__you__need__txt h2 {
+    font-size: var(--font-size-meduim-large);
+    color: #fff;
+    font-weight: 600;
+    width: fit-content;
+    max-width: 40rem;
+}
+
+.get__what__you__need__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.get__what__you__need__txt p {
+    font-size: var(--font-size-small);
+    color: #fff;
+    font-weight: 200;
+    margin-top: 1.5rem;
+    line-height: 1.8;
+    width: fit-content;
+    max-width: 40rem;
+}
+
+.get__what__you__need__txt span {
+    font-size: var(--font-size-small);
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.8;
+    width: fit-content;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.get__what__you__need__btn {
+    display: inline-block;
+    background-color: #fff;
+    /* padding: top right bottom left; */
+    padding: 1.6rem 2.6rem 1.6rem 2.6rem;
+    border-radius: 5px;
+    margin: 3rem 0;
+}
+
+.get__what__you__need__btn a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-small-normal);
+    font-weight: 600;
+}
+
+.get__what__you__need__btn:hover,
+.get__what__you__need__btn:active {
+    background-color: #fffffff7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/*############################################*/
+/*            Ride with Friends section       */
+/*############################################*/
+
+.ride__with__friends__container {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    gap: 10.5rem;
+}
+
+.ride__with__friends__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ride__with__friends__header h2 {
+    color: var(--color-primary);
+    font-size: var(--font-size-meduim-large);
+    font-weight: 600;
+    margin-top: 5rem;
+    width: fit-content;
+    max-width: 30rem;
+}
+
+.ride__with__friends__header p {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small-normal);
+    font-weight: 200;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+    width: fit-content;
+    max-width: 40rem;
+}
+
+.learn__more {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small-normal);
+    font-weight: 200;
+    line-height: 1.4; 
+    margin-top: 2.8rem;
+}
+
+.learn__more a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.learn__more a:hover,
+.learn__more a:active {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/*############################################*/
+/*            Uber App section                 */
+/*############################################*/
+.uber__app__header {
+    font-size: var(--font-size-meduim-large);
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.uber__app_img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.uber__app__txt__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    flex: wrap;
+    align-items: flex-start;
+}
+
+.uber__app__txt h4 {
+    font-size: var(--font-size-small-normal);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.uber__app__txt p {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+    font-weight: 200;
+    margin: 1.5rem 0;
+    line-height: 1.4;
+}
+
+.uber__app__btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    /* padding: top right bottom left; */
+    padding: 1.4rem 3.8rem 1.4rem 3.8rem;
+    border-radius: 10px;
+}
+
+.uber__app__btn:hover,
+.uber__app__btn:active {
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.uber__app__btn a {
+    color: #fff;
+    font-size: var(--font-size-small-normal);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.uber__app__btn a:hover,
+.uber__app__btn a:active {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+/*############################################*/
+/*        Looking For Business section         */
+/*############################################*/
+.looking__for__business {
+    background-color: var(--color-primary);
+}
+
+.looking__for__business__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10.5rem;
+    /* padding: top right bottom left; */
+    padding: 6rem 0 6rem 0;
+}
+
+.looking__for__business__txt h4 {
+    font-size: var(--font-size-meduim-large);
+    color: #fff;
+    font-weight: 600;
+    width: fit-content;
+    max-width: 40rem;
+}
+
+.looking__for__business__txt p {
+    font-size: var(--font-size-small-normal);
+    color: #fff;
+    font-weight: 200;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+    width: fit-content;
+    max-width: 40rem;
+}
+
+.looking__for__business__txt ul {
+    color: #fff;
+    margin-left: 2.5rem;
+    font-size: var(--font-size-small-normal);
+    line-height: 2rem;
+    font-weight: 200;
+}
+
+.looking__for__business__txt a {
+    color: #fff;
+}
+
+.get__started__btn__container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.get__started__btn .get__started__btn__txt {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-small-normal);
+    font-weight: 600;
+}
+
+.get__started__btn {
+    display: inline-block;
+    background-color: #fff;
+    padding: 1.4rem 3.8rem 1.4rem 3.8rem;
+    border-radius: 10px;    
+}
+
+.get__started__btn:hover,
+.get__started__btn:active {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.get__started__txt {
+    padding: 1.4rem 3.8rem 1.4rem 3.8rem;
+    border-radius: 10px;
+    font-size: var(--font-size-small-normal);
+    font-weight: 300;
+}
+
+
+
+
+/*############################################*/
+/*        FAQ section                      */
+/*############################################*/
+
+/* FAQ Section Styling */
+.FAQ__Questions__section {
+    padding: 2rem 1rem;
+}
+
+.FAQ__Question {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.059);
+}
+
+.FAQ__Questions__container {
+    /* padding: top right bottom left; */
+    padding: 3.5rem 0 3.5rem 0;
+}
+
+.FAQ__Questions__container h4 {
+    font-size: var(--font-size-meduim-large);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.FAQ__Question__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.FAQ__Question__header p {
+    font-size: var(--font-size-small-normal);
+    font-weight: 600;
+    margin: auto 0;
+}
+
+.FAQ__Question__header i {
+    font-size: var(--font-size-x-small);
+    font-weight: bold;
+    transition: transform 0.4s ease;
+}
+
+/* Rotated Icon on Active State */
+.FAQ__Question__header.active i {
+    transform: rotate(180deg);
+    transition: all 0.4s ease;
+}
+
+/* Hidden Content */
+.FAQ__Question__content {
+    display: none;
+    /* padding: top right bottom left; */
+    padding: 2.8rem 0 2.8rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.FAQ__Question__content a {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+
+/*############################################*/
+/*        Do more section                     */
+/*############################################*/
+.Do__more__in__the__app {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.Do__more__in__the__app__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.Barcode__image {
+    width: 30%;
+    object-fit: cover;
+}
+
+.Do__more__in__the__app__txt h4 {
+    font-size: var(--font-size-meduim-large);
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.Do__more__in__the__app__box {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(75, 75, 75, 0.051);
+    width: 100%;
+    /* padding: top right bottom left; */
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+}
